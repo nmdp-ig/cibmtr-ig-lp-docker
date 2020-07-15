@@ -1,7 +1,5 @@
 #FROM httpd:2.4.35-alpine
 FROM dtr.nmdp.org:4444/nmdp/nmdp-httpd:2.4.35-alpine.nmdp.0
-#RUN apk update; \
-#    apk upgrade;
 
 COPY ./apache.conf /usr/local/apache2/conf/httpd.conf
 
