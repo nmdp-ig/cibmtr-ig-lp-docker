@@ -10,9 +10,9 @@ services:
     networks: 
       - frontend
       - backend
-    volumes:
-      - ./public_html:/usr/local/apache2/htdocs
-      - ./cert/:/usr/local/apache2/cert/
+#    volumes:
+#      - ./public_html:/usr/local/apache2/htdocs
+#      - ./cert/:/usr/local/apache2/cert/
     depends_on:
       - php
   php:
@@ -21,9 +21,9 @@ services:
     user: 1000:1000
     networks: 
       - backend
-    volumes:
-      - ./public_html:/usr/local/apache2/htdocs
-      - ./tmp:/usr/local/tmp
+#    volumes:
+#      - ./public_html:/usr/local/apache2/htdocs
+#      - ./tmp:/usr/local/tmp
 networks: 
   backend:
   frontend:
