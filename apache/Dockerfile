@@ -20,10 +20,12 @@ RUN     git clone https://a7b9ad562d57b74c1526907a61a7f54ab7192536@github.com/nm
 RUN     npm config set strict-ssl false
 RUN     export NODE_TLS_REJECT_UNAUTHORIZED=0
 RUN     cd /gatsby-build && \
+        pwd && \
         #npm ci && \
         npm install && \
         gatsby build && \
         cd public && \
+        pwd && \
         mkdir -p ig && \
         cd ig && \
         git clone -b deploy-ready-dev https://a7b9ad562d57b74c1526907a61a7f54ab7192536@github.com/nmdp-ig/hla-reporting-ig.git hla-reporting/ && \
